@@ -56,3 +56,8 @@ SNMP定义的APPLICATION数据类型:
 |        NULL        | UNIVERSAL 5  |    0x05    |   0x05    |
 | OBJECT IDENTIFIER  | UNIVERSAL 6  |    0x06    |   0x06    |
 |      SEQUENCE      | UNIVERSAL 16 |    0x10    |   0x30    |
+
+## OID(OBJECT INDETIFIER)
+
+1.3.6.1.4  
+标准MIB
