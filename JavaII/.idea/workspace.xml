@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ecf60b8-32b2-45f0-8cb9-e293b40ca13f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaII.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaII.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/Test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Test/Test.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -47,13 +41,13 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="154" y="48" width="996" height="709" key="SettingsEditor" timestamp="1584058405740">
+    <state x="154" y="48" width="996" height="709" key="SettingsEditor" timestamp="1584404210994">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="154" y="48" width="996" height="709" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1584058405740" />
-    <state x="454" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584057830260">
+    <state x="154" y="48" width="996" height="709" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1584404210994" />
+    <state x="454" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584404168702">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="454" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1584057830260" />
+    <state x="454" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1584404168702" />
   </component>
 </project>
