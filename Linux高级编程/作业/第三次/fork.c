@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
+#include <sys/wait.h>
 
 int main()
 {
@@ -9,7 +10,7 @@ int main()
     pid = fork();
     if (pid == -1)
     {
-        perro("fork");
+        perror("fork");
         exit(EXIT_FAILURE);
     }
     else if (pid == 0)
