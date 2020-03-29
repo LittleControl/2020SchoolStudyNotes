@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>第二次作业.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BD%9C%E4%B8%9A">第二次作业</h1>
+<h2 id="%E5%A1%AB%E7%A9%BA%E9%A2%98">填空题</h2>
+<ol>
+<li>在Linux中,所有设备和磁盘文件的打开操作都可使用(open)系统调用来进行</li>
+<li>调用()函数可以创建一个文件,调用(stat)函数可以获取文件的属性</li>
+<li>在Linux中,文件的权限分为(拥有者)(组内用户)(其他用户)三类,每类分为(读)(写)和(执行)权限</li>
+<li>读取一个目录文件的内容时,可使用系统调用(read)</li>
+<li>若file文件存取权限为r-xr--r--,这表明属主有(读,执行)权限,组用户有(读)权限,其他用户有(读)权限</li>
+</ol>
+<h2 id="%E7%AE%80%E7%AD%94%E9%A2%98">简答题</h2>
+<ol>
+<li>説明系统I/O和标准I/O的区别,并説明它们的适用场合
+<ul>
+<li>系统I/O和标准I/O的区别就是一个不带缓存,一个提供缓存</li>
+<li>系统I/O称为不带缓存的I/O,不带缓存是指每个read,write都调用内核中的一个系统调用.也就是一半所说的低级I/O,也就是操作系统提供的几本I/O服务,与OS绑定,特定于Linux或Unix平台</li>
+<li>标准I/O是ANSI C建立的一个标准I/O模型,是一个标准函数包和stdio.h头文件中的定义,具有一定的可移植性.标准I/O库,可以处理很多细节,并且提供了全缓存,行缓存和不带缓存三种类型的缓存</li>
+</ul>
+</li>
+<li>什么是文件描述符?什么是流?二者有什么区别和联系?
+<ul>
+<li>文件描述符用于表述指向文件的引用的抽象话概念.文件描述符在形式上是一个非负整数,实际上,它是一个索引值,指向内核为每一个程序所维护的该进程代开文件的纪录表.当程序打开一个先有文件或者创建一个新文件时,内核向进程返回一个文件描述符.</li>
+<li>流表示任意输入源或任意输出的目的地.很多程序是通过一个或多个流进行读入和输出的.这些流可能存储在不同的介质,也可能是不存储文件的设备.头文件<code>stdio.h</code>中定义了处理流的函数.C程序中对流的操作是通过<code>FILE *</code>实现的.所以说这种数据类型表示的就是一个流.一个流对象保存了和文件连接的情况以及缓冲的状态,还有文件位置定位符的状态.每一个流还有一个文件末位指示器和错误指示器,可以通过ferror和feof来监测.</li>
+<li>区别与联系: 流是文件描述符的抽象,文件描述符是系统层次的调用.文件描述符提供了一个原始的,低层次的输入输出接口.而流提供了一个基于原始的文件描述符的高层次接口.使用流的主要优势是操作流的函数比文件描述符多得多,而且更加强大方便.但是因为流是基于文件描述符的,所以实际上你可以&quot;拆借&quot;一个流得到对应的文件描述符然后哦进行低层次的操作.相反地,你也可以先用文件描述符和一个文件建立连接,然后建立一个链接这个文件描述符的对象.</li>
+</ul>
+</li>
+</ol>
+<h2 id="%E7%BC%96%E7%A8%8B%E9%A2%98">编程题</h2>
+<ol>
+<li>
+<p>用create, open, close等系统调用,实现fopen, fclose的功能</p>
+<pre class="hljs"><code><div> <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+ <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/stat.h&gt;</span></span>
+ <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;fcntl.h&gt;</span></span>
+ <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+
+ <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+ </span>{
+     <span class="hljs-keyword">int</span> file;
+     file = <span class="hljs-built_in">open</span>(<span class="hljs-string">"content.txt"</span>, O_RDONLY);
+     <span class="hljs-keyword">if</span> (file == <span class="hljs-number">-1</span>) {
+         <span class="hljs-built_in">printf</span>(<span class="hljs-string">"open file failed, try to create a file"</span>);
+         file = creat(<span class="hljs-string">"content.txt"</span>, <span class="hljs-number">0777</span>);
+         <span class="hljs-built_in">write</span>(file, <span class="hljs-string">"Something Just Like This"</span>, <span class="hljs-number">24</span>);
+     }
+     <span class="hljs-keyword">else</span>
+     {
+         <span class="hljs-keyword">ssize_t</span> ret;
+         <span class="hljs-keyword">char</span> buf[<span class="hljs-number">25</span>];
+         <span class="hljs-keyword">int</span> len = <span class="hljs-keyword">sizeof</span>(buf);
+         ret = <span class="hljs-built_in">read</span>(file, buf, len);
+         <span class="hljs-built_in">write</span>(<span class="hljs-number">1</span>, <span class="hljs-string">"Finshed...\n"</span>, <span class="hljs-number">12</span>);
+         <span class="hljs-built_in">write</span>(<span class="hljs-number">1</span>, buf, ret);
+     }
+     <span class="hljs-built_in">close</span>(file);
+     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+ }
+
+</div></code></pre>
+</li>
+<li>
+<p>设计一个程序,要求打开&quot;pass&quot;.如果没有这个文件,新建此文件;读取系统文件&quot;/etc/passwd&quot;, 把文件中的内容都写入&quot;pass&quot;文件.</p>
+<pre class="hljs"><code><div><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/stat.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;fcntl.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">int</span> file;
+    <span class="hljs-keyword">ssize_t</span> ret;
+    <span class="hljs-keyword">char</span> buf[<span class="hljs-number">1024</span>];
+    <span class="hljs-keyword">int</span> len = <span class="hljs-keyword">sizeof</span>(buf);
+    file = <span class="hljs-built_in">open</span>(<span class="hljs-string">"pass"</span>, O_RDONLY);
+    <span class="hljs-keyword">if</span> (file == <span class="hljs-number">-1</span>) {
+        <span class="hljs-built_in">write</span>(<span class="hljs-number">1</span>, <span class="hljs-string">"open failed, try to create\n"</span>, <span class="hljs-number">28</span>);
+        <span class="hljs-built_in">close</span>(file);
+        file = creat(<span class="hljs-string">"pass"</span>, <span class="hljs-number">0777</span>);
+        <span class="hljs-keyword">int</span> newFile;
+        newFile = <span class="hljs-built_in">open</span>(<span class="hljs-string">"/etc/passwd"</span>, O_RDONLY);
+        <span class="hljs-keyword">while</span> ((ret = <span class="hljs-built_in">read</span>(newFile, buf, len)) &gt; <span class="hljs-number">0</span>)
+        {
+            <span class="hljs-built_in">write</span>(file, buf, ret);
+        }
+        <span class="hljs-built_in">write</span>(<span class="hljs-number">1</span>, <span class="hljs-string">"Finished...\n"</span>, <span class="hljs-number">13</span>);
+        <span class="hljs-built_in">close</span>(newFile);
+    } 
+    <span class="hljs-keyword">else</span>
+    {
+        <span class="hljs-built_in">write</span>(<span class="hljs-number">1</span>, <span class="hljs-string">"open successfully\n"</span>, <span class="hljs-number">19</span>);
+        <span class="hljs-keyword">while</span> ((ret = <span class="hljs-built_in">read</span>(file ,buf, len)) &gt; <span class="hljs-number">0</span>) 
+        {
+            <span class="hljs-built_in">write</span>(<span class="hljs-number">1</span>, buf, ret);
+        }
+    }
+    <span class="hljs-built_in">close</span>(file);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+</div></code></pre>
+</li>
+</ol>
+<p>(选作题)根据3.6介绍的内容,补充myls.c源码,实现3.6节要求的ls命令</p>
+
+</body>
+</html>
