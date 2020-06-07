@@ -18,7 +18,8 @@ public class AcceptHandler implements Handler{
         if(socketChannel == null) return;
         System.out.println("接收到客户连接,来自: " + socketChannel.socket().getInetAddress() + ":" + socketChannel.socket().getPort());
         ChannelIO cio = new ChannelIO(socketChannel, false);
-        RequestHandler rh = new RequestHandler(cio);
+//        RequestHandler rh = new RequestHandler(cio);
+        RequestHandler rh = new RequestHandler();
         socketChannel.register(key.selector(), SelectionKey.OP_READ, rh);
     }
 }
