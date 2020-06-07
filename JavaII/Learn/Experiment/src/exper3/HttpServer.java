@@ -40,23 +40,10 @@ public class HttpServer {
             Iterator it = readyKeys.iterator(); //获取Set集合的迭代器
             while(it.hasNext()){
                 SelectionKey key = null;
-                try{
-                    key = (SelectionKey) it.next(); //使用迭代器将事件存入句柄对象
-                    it.remove();                    //将取出的对象从集合中移除
-                    final Handler handler = (Handler) key.attachment(); //将与key关联的附件传给handler
-                    handler.handle(key); //在Handler中处理事件
-                }catch(IOException e){ //若捕获IO异常做如下处理
-                    e.printStackTrace();//打印异常信息
-                    try{
-                        if(key!=null){//判断key是否为空
-                            key.cancel();//使这个key失效
-                            //使得Selector不在监控这个SelectionKey感兴趣的事件
-                            key.channel().close();
-                        }
-                    }catch(Exception ex){//若捕获异常
-                        ex.printStackTrace();//打印异常信息
-                    }
-                }
+                key = (SelectionKey) it.next(); //使用迭代器将事件存入句柄对象
+                it.remove();                    //将取出的对象从集合中移除
+                final Handler handler = (Handler) key.attachment(); //将与key关联的附件传给handler
+//                    handler.handle(key); //在Handler中处理事件
             }
         }
     }

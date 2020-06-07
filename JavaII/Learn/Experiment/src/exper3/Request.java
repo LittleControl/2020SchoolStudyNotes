@@ -1,6 +1,5 @@
 package exper3;
 
-import javax.swing.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.ByteBuffer;
@@ -100,20 +99,25 @@ public class Request {
         return bb;
     }
 
-    private static Pattern requestPattern = Pattern.compile("\\(A[A-Z]+)+([^]+)+HTTP/([0-9\\.]+)$)" + ".*^Host:([^]+$.*\r\n\r\n\\z", Pattern.MULTILINE | Pattern.DOTALL);
+//    private static Pattern requestPattern = Pattern.compile("\\(A[A-Z]+)+([^]+)+HTTP/([0-9\\.]+)$)" + ".*^Host:([^]+$.*\r\n\r\n\\z", Pattern.MULTILINE | Pattern.DOTALL);
+    private static Pattern requestPattern = Pattern.compile(".*^Host:$.*\r\n", Pattern.MULTILINE | Pattern.DOTALL);
 
-    public static Request parse(ByteBuffer bb) throws MalformedInputException {
+    public static void parse(ByteBuffer bb) throws MalformedInputException {
         bb = deleteContent(bb);
         CharBuffer cb = requestCharset.decode(bb);
         Matcher m = requestPattern.matcher(cb);
-        if (!m.matches()) {
-            throw new MalformedInputException();
-        }
+//        if (!m.matches()) {
+//            throw new MalformedInputException();
+//        }
         Action a;
         try {
             a = Action.parse(m.group(1));
         } catch (IllegalAccessException x) {
-            throw new MalformedRequestException();
+            try {
+                throw new MalformedRequestException();
+            } catch (MalformedRequestException e) {
+                e.printStackTrace();
+            }
         }
         URI u;
         HashMap<String, String> parameterMap = new HashMap<String, String>();
@@ -128,10 +132,17 @@ public class Request {
                 }
             }
         } catch (URISyntaxException x) {
-            throw new MalformedRequestException();
+            try {
+                throw new MalformedRequestException();
+            } catch (MalformedRequestException e) {
+                e.printStackTrace();
+            }
         }
     }
     public String getParameter(String key) {
         return parameterMap.get(key);
+    }
+
+    private static class MalformedRequestException extends Throwable {
     }
 }
