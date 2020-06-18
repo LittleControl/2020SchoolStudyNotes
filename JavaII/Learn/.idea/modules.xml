@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Experiment/Experiment.iml" filepath="$PROJECT_DIR$/Experiment/Experiment.iml" />
       <module fileurl="file://$PROJECT_DIR$/Learn.iml" filepath="$PROJECT_DIR$/Learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/NetWork/NetWork.iml" filepath="$PROJECT_DIR$/NetWork/NetWork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SNMP/SNMP.iml" filepath="$PROJECT_DIR$/SNMP/SNMP.iml" />
     </modules>
   </component>
 </project>
