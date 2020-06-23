@@ -1,0 +1,17 @@
+# The Beginning of the End of Driving
+
+`The Autonomous Car Continues to Progress`
+
+The week after Governor Jerry Brown signed a bill that makes driving autonomous cars legal in California, Google's Anthony Levandowski said he expects his company to have them on the market in five years. The Silicon Valley Internet search engine company abruptly retrenched from the statement of its autonomous car chief, as quoted by John McElroy in AutoLine Daily. He was not available for comment to Motor Trend.
+
+Whatever Google says, the driverless car is nigh upon us. At a formal demonstration to international press of its latest Advanced Driver Assistance Systems unit technologies in Alzenau, and of its latest interior systems in nearby Babenhausen, automotive supply giant Continental outlined an aggressive agenda for driverless cars. Continental plans to have autonomous assistance available for limited freeway driving and for construction areas by 2015, says senior vice president Ralf Lenninger. It will add low-speed city capability in 2017, followed by two-lane highway and country road driverless car technology about the end of the decade. The company calls this "the car you can't crash," and it will meet the company's goal for a zero-percent accident rate.
+
+Continental demonstrated key components of the advancing technology, including 360-degree cameras; adaptive cruise control; emergency brake assist using radar and camera options; and emergency brake assist pedestrian protection, in which the car can make an evasive maneuver by steering itself out and back into a lane. This makes at least basic driverless car technology feasible, Lenninger notes. Several demonstration cars had Continental's stereo cameras, which can outline and identify pedestrians and bicyclists for an autonomous system.
+
+The European Union will take up the issue of driverless car legislation at a convention in Vienna, says Matthew Avery, chief of research at Thatcham Research, the Insurance Institute for Highway Safety's counterpart in the United Kingdom. Avery was the keynote speaker at Continental ADAS' conference in Germany. Meantime, the U.S. National Highway Traffic Safety Administration "sees a lot of liability issues" with driverless cars, Avery adds. So far, it's been up to the states of Nevada, Florida, and now California to advance the cause in the U.S. Arizona and Hawaii considered similar laws, but failed to pass them.
+
+"These state legislatures introduced their own bills without Google's involvement," a Google spokesperson explains about Arizona and Hawaii. "Similarly, Florida introduced a bill and Google became engaged later on, after the state expressed initial interest."
+
+The Google spokesperson says Nevada's laws "were forward-looking, and we'd had productive and cooperative discussions with the legislators there. We also saw potential because Nevada is close to our main operations, and has a relatively high rate of pedestrian deaths, an aging population, and versatile terrain. We began our roughly 300,000 miles of testing our self-driving technology in California, and it's where we've covered the most ground."
+
+Continental expects to have full autonomy available by 2025, with premium/luxury cars offering the freeway/construction technology first, in 2015. Continental was only nominally involved with Cadillac on its 2015 SuperCruise option. We'll guess any combination of these brands in 2015: Volvo, Mercedes-Benz, Audi, and/or BMW.
