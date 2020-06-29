@@ -32,6 +32,16 @@ public class Server implements Hello {
     public String sayHello(String message) throws RemoteException {
         return message;
     }
+
+    @Override
+    public int plus(int a, int b) {
+        return 0;
+    }
+
+    @Override
+    public int minus(int a, int b) {
+        return 0;
+    }
 }
 
 /*
